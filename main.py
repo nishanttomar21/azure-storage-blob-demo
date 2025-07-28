@@ -113,9 +113,7 @@ except Exception as e:
 # STEP 6: DOWNLOAD BLOBS FROM STORAGE
 # =============================================================================
 
-print(f"\nStarting download and cleanup process...")
-
-# Loop through each uploaded file for download and deletion
+print(f"\nStarting download process...")
 for src_blob_name in upload_files:
     try:
         # Skip if file doesn't exist (wasn't uploaded successfully)
@@ -135,16 +133,19 @@ for src_blob_name in upload_files:
             download_file.write(download_stream.readall())
             print(f"Downloaded '{src_blob_name}' as '{downloaded_filename}'")
 
-        # =============================================================================
-        # STEP 7: DELETE BLOB AFTER DOWNLOAD
-        # =============================================================================
-
-        # Delete the blob from storage after successful download
-        blob_client.delete_blob()
-        print(f"Deleted blob: {src_blob_name}")
-
     except Exception as e:
         print(f"Error processing {src_blob_name}: {e}")
+
+# =============================================================================
+# STEP 7: DELETE THE CONTAINER (AND ALL BLOBS INSIDE)
+# =============================================================================
+
+print(f"\nDeleting container '{container_name}'...")
+try:
+    container_client.delete_container()
+    print(f"Container '{container_name}' deleted successfully!")
+except Exception as e:
+    print(f"Error deleting container: {e}")
 
 # =============================================================================
 # FINAL VERIFICATION
