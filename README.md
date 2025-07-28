@@ -74,9 +74,6 @@ python main.py
 
 ### 4. **Expected Output**:
 ```bash
-Created sample1.txt
-Created sample2.docx
-
 Authenticating with Azure...
 Container 'mytestcontainer' created successfully!
 
@@ -101,6 +98,11 @@ Local files in directory:
    [FOUND] sample2.docx
    [FOUND] downloaded_sample1.txt
    [FOUND] downloaded_sample2.docx
+
+SUMMARY:
+- Files uploaded: 2
+- Files downloaded: 2
+- Container deleted: True
 
 Script execution completed!
 ```
