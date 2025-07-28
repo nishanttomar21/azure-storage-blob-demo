@@ -85,21 +85,22 @@ Uploaded: sample1.txt
 Uploaded: sample2.docx
 
 Listing all blobs in container 'mytestcontainer':
-- sample1.txt
-- sample2.docx
-Total blobs: 2
+   - sample1.txt
+   - sample2.docx
+   Total blobs: 2
 
-Starting download and cleanup process...
+Starting download process...
 Downloaded 'sample1.txt' as 'downloaded_sample1.txt'
-Deleted blob: sample1.txt
 Downloaded 'sample2.docx' as 'downloaded_sample2.docx'
-Deleted blob: sample2.docx
+
+Deleting container 'mytestcontainer'...
+Container 'mytestcontainer' deleted successfully!
 
 Local files in directory:
-[FOUND] sample1.txt
-[FOUND] sample2.docx
-[FOUND] downloaded_sample1.txt
-[FOUND] downloaded_sample2.docx
+   [FOUND] sample1.txt
+   [FOUND] sample2.docx
+   [FOUND] downloaded_sample1.txt
+   [FOUND] downloaded_sample2.docx
 
 Script execution completed!
 ```
