@@ -1,0 +1,3 @@
+azure-storage-blob  # Azure SDK for Blob Storage operations
+azure-identity      # For DefaultAzureCredential authentication
+python-docx         # Only needed if you want auto-creation of the sample .docx file
