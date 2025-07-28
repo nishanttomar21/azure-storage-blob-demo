@@ -8,7 +8,7 @@ This project demonstrates basic operations on Azure Blob Storage using the Pytho
 - Uploads multiple file types to the container
 - Lists all blobs in the container
 - Downloads the blobs with a "downloaded_" prefix
-- Deletes the blobs after downloading
+- Deletes the container after downloading
 - Performs final verification of local files
 
 ## Features
@@ -114,11 +114,10 @@ C --> D[Create Container]
 D --> E[Upload Files]
 E --> F[List Blobs]
 F --> G[Download Blobs]
-G --> H[Delete Blobs]
+G --> H[Delete Container]
 H --> I[Final Verification]
 I --> J[Script Complete]
 ```
-
 
 ## Authentication & Permissions
 
