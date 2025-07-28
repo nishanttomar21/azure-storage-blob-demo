@@ -30,7 +30,7 @@ This project demonstrates basic operations on Azure Blob Storage using the Pytho
 - Required permissions: "Storage Blob Data Contributor" role on the storage account
 - Python packages listed in requirements.txt
 
-## 🔧 Installation
+## Installation
 
 ### Clone the repository
 ```bash
